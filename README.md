@@ -5,7 +5,7 @@ A conversational AI chatbot designed to teach Data Structures and Algorithms (DS
 
 ## Demo
 
-Insert gif or link to demo
+[Insert gif or link to demo](https://algo-tutor-ai-powered-dsa-instructo-zeta.vercel.app/)
 
 
 ## Deployment
