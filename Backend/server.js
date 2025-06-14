@@ -10,7 +10,7 @@ const port = 3001;
 
 // Middleware setup
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173'], // Allow both common React ports
+  origin: ['http://localhost:3000', 'https://algo-tutor-ai-powered-dsa-instructo-zeta.vercel.app/'], // Allow both common React ports
   credentials: true
 }));
 app.use(express.json());
