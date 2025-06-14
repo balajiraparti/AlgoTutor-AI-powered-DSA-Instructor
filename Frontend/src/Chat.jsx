@@ -31,13 +31,13 @@ else{
 
     try {
       // First test the connection
-      const testResponse = await fetch('https://algo-tutor-ai-powered-dsa-instructo.vercel.app/api/test');
+      const testResponse = await fetch('/api/test');
       if (!testResponse.ok) {
         throw new Error('Cannot connect to server');
       }
 
       // Send the actual message
-      const result = await fetch('https://algo-tutor-ai-powered-dsa-instructo.vercel.app/api/chat', {
+      const result = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
