@@ -317,7 +317,7 @@ right: 52px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     /* margin-left: 1px; */
   width: 793px;
-    min-width: 396px;
+    min-width: 200px;
     /* max-height: 2000px; */
     min-height: 300px;
     height: 510px;
@@ -410,6 +410,28 @@ top: 110px;
     .chatM {
         left: 150px;
         width: calc(100% - 170px);
+
+    }
+        .res {
+      width: calc(100% - 50px) !important;
+        right: 20px;
+        height: calc(100% - 360px) !important;
+        
+    }
+        .txtarea {
+        width: calc(100% - 80px) !important; /* Original left:50px */
+        left: 25px;
+    }
+    
+    .bt {
+        width: calc(100% - 47px) !important;
+        left: 25px;
+    }
+    .ins{
+      width: 100%;
+      position: relative;
+      bottom: 2px;
+  
     }
 }
 
@@ -418,15 +440,29 @@ top: 110px;
         left: 50px;
         width: calc(100% - 70px);
     }
-    
-    .res {
-        width: calc(100% - 104px); /* 52px * 2 */
+        .res {
+      width: calc(100% - 50px) !important;
+        right: 20px;
+        height: calc(100% - 360px) !important;
+        
     }
+        .txtarea {
+        width: calc(100% - 80px) !important; /* Original left:50px */
+        left: 25px;
+    }
+    
+    .bt {
+        width: calc(100% - 47px) !important;
+        left: 25px;
+    }
+    
+
 }
 
 @media (max-width: 768px) {
     .chatM {
         left: 20px;
+ 
         width: calc(100% - 40px);
         min-height: 800px;
     }
@@ -442,7 +478,7 @@ top: 110px;
     }
     
     .res {
-      width: calc(100% - 100px) !important;
+      width: calc(100% - 50px) !important;
         right: 24px;
         height: calc(100% - 360px) !important;
         
@@ -455,7 +491,7 @@ top: 110px;
 
 @media (max-width: 576px) {
     .chatM {
-        left: 10px;
+        left: 1px;
         width: calc(100% - 20px);
         margin-top: 40px;
         min-height: 700px;
@@ -473,18 +509,16 @@ top: 110px;
     .chatM .cht .qu {
         font-size: 18px;
     }
+     .foot{
+    width:100%;
+
+left:1px;
+
+  }
+    
 }
 
 .con::-webkit-scrollbar-track {
   background: #fff;
   border-radius: 8px;
-}
-@media (max-width:800px)
-{
-  .foot{
-    width:(100%-100px);
-    position: relative;
-    left: 1px;
-    right: 100px;
-  }
 }
