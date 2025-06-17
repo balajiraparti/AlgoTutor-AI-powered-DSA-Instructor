@@ -347,6 +347,7 @@ align-items: center;
   position: relative;
    left: 10px;
 top: 110px;
+
   border: 13px solid #ddd;
   border-top: 13px solid #AB62A9;
   border-radius: 50%;
@@ -361,7 +362,7 @@ top: 110px;
 .loadt{
   position: relative;
   top:120px;
-
+flex: 1;
   /* right:25px; */
       font-family: 'Courier New', Courier, monospace;
   font-size: 1.0em;
@@ -383,6 +384,7 @@ top: 110px;
   height: 87.5%;
   width: 100%;
   min-width: none;
+  min-height:none;
    font-size: large;
   font-weight: bolder;
   resize: none;           /* Allow vertical resizing */
@@ -434,6 +436,13 @@ top: 110px;
       bottom: 2px;
   
     }
+    .con{
+      height: calc(100% - 80px) !important;
+      font-size: medium;
+    }
+    .load{
+        width: calc(100% - 47px) !important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -457,7 +466,12 @@ top: 110px;
         left: 25px;
     }
     
-
+  .con{
+      font-size: medium;
+    }
+       /* .load{
+        width: calc(100% - 47px) !important;
+    } */
 }
 
 @media (max-width: 768px) {
@@ -487,6 +501,26 @@ top: 110px;
     
     .chatM .cht .qu {
         padding-left: 25px;
+    }
+      .con{
+      font-size: medium;
+    }
+       .load{
+        align-self: center;
+        justify-self: center;
+position: relative;
+bottom: 10%;
+        width: calc(100% - 207px) !important;
+    }
+       .loadt{
+      font-size: .9em;
+
+    }
+    .loada
+    {  top: 125px;
+left:1px;
+       width: 30px; 
+        height: 30px; 
     }
 }
 
@@ -519,10 +553,33 @@ left:1px;
      .res {
       width: calc(100% - 50px) !important;
         right: 24px;
-        /* height: calc(100% - 360px) !important; */
+         height: calc(100% -20%) ;
+
+    }
+     .con{
+      height: calc(100% - 90px) !important;
+      font-size: medium;
+    }
+       .load{
+     
+        width: calc(100% - 100px) !important;
+        height: calc(100% - 60px) !important;
+        justify-self: center;
+        align-self: center;
+        position: relative;
+        bottom: 80px;
         
     }
-    
+    .loadt{
+      font-size: .9em;
+
+    }
+    .loada
+    {  top: 125px;
+left:1px;
+       width: 20px; 
+        height: 20px; 
+    }
 }
 
 
