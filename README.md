@@ -55,7 +55,7 @@ npm install requirements.txt
     
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [@balajiraparti](https://www.github.com/balajiraparti)
 
 
 ## FAQ
