@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
 
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
    function Chat() {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
@@ -11,9 +11,7 @@ import dynamic from 'next/dynamic';
   const [responsenew, setResponsenew] = useState('');
   const [micActive, setMicActive] = useState(false);
     const [isSupported, setIsSupported] = useState(true);
-    
-const SpeechRecognition = typeof window !== 'undefined' ? require('react-speech-recognition').default : null;
-const useSpeechRecognition = typeof window !== 'undefined' ? require('react-speech-recognition').useSpeechRecognition : () => ({});
+  const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
   if(!isSupported){
 
     alert("microphone isn't supported!");
@@ -21,35 +19,24 @@ const useSpeechRecognition = typeof window !== 'undefined' ? require('react-spee
     const formatText = (text) => {
   return text.replace(/\*/g, '');
   };
-    // Use the hook only on the client
-  const {
-    transcript,
-    listening,
-    resetTranscript,
-    browserSupportsSpeechRecognition,
-  } = typeof window !== 'undefined' ? useSpeechRecognition() : {};
-
+    
   const startListening = () => {
-    if (!SpeechRecognition || !browserSupportsSpeechRecognition) return;
-
-    setMicActive((prev) => !prev);
-    resetTranscript(); // optional: clear previous text
-    SpeechRecognition.startListening({
-      continuous: false,
-      language: 'en-IN',
-    });
+       setMicActive((prev) => !prev);
+    resetTranscript(); // Optional: Clear previous transcript
+    SpeechRecognition.startListening({ continuous: false, language: 'en-IN' });
   };
-
-  useEffect(() => {
+   React.useEffect(() => {
     if (!listening && transcript) {
-      setMessage(transcript);
-      setMicActive(false);
+       setMessage(transcript);
+       setMicActive(false);
     }
   }, [listening, transcript]);
 
-  if (typeof window === 'undefined' || !browserSupportsSpeechRecognition) {
+  if (!browserSupportsSpeechRecognition) {
     return <span>Your browser does not support speech recognition.</span>;
   }
+
+
 
 
 
@@ -174,4 +161,4 @@ return(
 
 );
 }
-export default dynamic(() => Promise.resolve(Chat), { ssr: false });
+export default Chat
