@@ -1,0 +1,668 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --base-clr: #212332;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+
+html{
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5rem;
+}
+body{
+  background-color: var(--base-clr);
+  color: var(--text-clr);
+}
+.header {
+    margin-top: 50px;
+    border: 3px solid rgb(14, 229, 226);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 80px;
+    min-width: none;
+    max-width: 800px;
+    max-height: 500px;
+    background-color: #42434a;
+}
+.i2{
+  color: #020674;
+}
+.he1 {
+     background: linear-gradient(90deg, rgb(171, 98, 169) 0%, rgb(215, 9, 171) 35%, rgb(225, 19, 15) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  /* Responsive font size */
+  font-weight: bold; /* Optional: for better effect */
+  line-height: 1.1;  /* Optional: for multi-line gradient text */
+ text-shadow: 
+        0 0 12px rgba(215, 9, 171, 0.7),
+        0 0 24px rgba(225, 19, 15, 0.5);
+    
+    /* Flowing Gradient Animation */
+    background-size: 300% 100%;
+    animation: flowingGradient 4s ease-in-out infinite;
+}
+
+@keyframes flowingGradient {
+    0% {
+        background-position: 0% 50%;
+        background-image: linear-gradient(90deg, 
+            rgb(171, 98, 169) 0%, 
+            rgb(215, 9, 171) 35%, 
+            rgb(225, 19, 15) 100%);
+    }
+    50% {
+        background-position: 100% 50%;
+        background-image: linear-gradient(90deg, 
+            rgb(225, 19, 15) 0%, 
+            rgb(171, 98, 169) 35%, 
+            rgb(215, 9, 171) 100%);
+    }
+    100% {
+        background-position: 0% 50%;
+        background-image: linear-gradient(90deg, 
+            rgb(215, 9, 171) 0%, 
+            rgb(225, 19, 15) 35%, 
+            rgb(171, 98, 169) 100%);
+    }
+}
+.p1{
+  padding-left: 10px;
+word-wrap: break-word;
+color: #e6e6ef;
+}
+@media (max-width:800px)
+{
+.header{
+  position: relative;
+  width: (100%-100px);
+  align-items: center;
+right: 30px;
+}
+}
+.icon{
+/* display: inline-block; */
+position: relative;
+top: 5px;
+width: 35px;
+height: 35px;
+
+
+}
+footer
+{
+  background-color: #111;
+}
+.foot{
+width: 100%;
+position: relative;
+right: 60px;
+padding: 70px 30px 20px ;
+}
+.footIcon
+{
+display: flex;
+justify-content: center;
+
+}
+.footB
+{
+  display: flex;
+  justify-content: center;
+  right: 10px;
+}
+.footIcon a{
+
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    margin:10px
+}
+.footIcon a i
+{
+  font-size: 1.5em;
+  color: black;
+  opacity: 0.9;
+}
+/* Container to ensure overflow is hidden during scaling */
+.img-hover-container {
+  width: 300px;
+  max-width: 30vw;
+  padding-left: 120px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 20px;
+  top: 50px;
+}
+
+.ins {
+  width: 100%;
+  max-width: 100%;
+  min-width: 50%;
+  min-height: 50%;
+  height: auto;
+  display: flex;
+  object-fit: contain;
+  border-radius: 20px;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s;
+  position: relative;
+  z-index: 1;
+  
+  /* New responsive additions */
+
+  max-height:300px; /* Prevent image from being taller than viewport */
+
+}
+
+/* Container improvements for better responsiveness */
+/* .img-hover-container {
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+} */
+
+/* Aspect ratio preservation (alternative method) */
+.img-hover-container::before {
+  content: "";
+  display: flex;
+ /* Default 16:9, adjust to your common image ratio */
+}
+
+
+/* Scale and shadow on hover */
+.img-hover-container:hover .ins {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(33,35,50,0.18);
+}
+
+/* Optional: overlay effect on hover */
+.img-hover-container::after {
+  content: "";
+  position: flex;
+  inset: 0;
+  background: rgba(33,35,50,0.18); /* matches --base-clr with transparency */
+  opacity: 0;
+  border-radius: 20px;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+
+
+.chatM
+{
+
+    margin-top: 80px;
+    border: 3px solid rgb(14, 229, 226);
+    border-radius: 10px;
+    display: flex;
+ /* justify-content: left;  
+   align-items: top;  */
+    position: relative;
+left: 250px;
+ /* justify-content: center;  
+  align-items: center;  */
+     box-sizing: border-box; 
+ transform: translateX(0); /* Hardware-accelerated positioning */
+    will-change: transform; /* Optimizes for browsers that support it */
+    backface-visibility: hidden;
+    margin-left: 20px;
+    max-width: 900px;
+    max-height: 2000px;
+    min-height: 900px;
+    background-color: #42434a;
+     width: calc(100% - 270px); /* Accounts for left positioning */
+    margin-right: 20px;
+
+}
+.chatM .cht .qu
+{
+  position: relative;
+  top: 15px;
+  padding-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+ .chatM .cht .qu i{
+   size-adjust:inherit;
+  padding-right:6px ;
+ color: rgba(215, 9, 171, 0.35);
+}
+.p1 i{
+  size-adjust:inherit;
+   min-height:5px;
+   min-weight:5px;
+  padding-right:6px ;
+ color: rgba(33, 60, 239, 0.35);
+}
+.txtarea
+{ resize: none;   
+  z-index: 1000;  
+  position: relative;
+  left: 50px;
+  font-size: larger;
+  border-radius: 8px; 
+  margin-top: 7px;
+  padding: 15px 20px 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  background-color:#a2a4eb;
+  color: #3c3d5b;
+  font-weight: bolder;
+  max-width: 900px;
+  width: 750px;
+  max-height: 150px;
+ 
+/*   */
+}
+.txtarea::placeholder {
+  color: #3c3d5b;   
+  opacity: .75;
+  font-weight: bolder;       
+}
+.bt{
+  position: relative;
+
+width: 89%;
+left: 48.5px;
+top: 20px;
+height: 50px;
+font-size: medium;
+font-weight: bolder;
+color: white;
+text-align:center;
+/* justify-content: center; */
+padding-bottom:2px;
+box-sizing: border-box;
+  cursor: pointer;
+ border-radius: 8px; 
+background-color: rgba(237, 19, 189, 0.35);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.plimg{
+position: relative;
+top: 1px;
+  height: 15px;
+  width: 15px;
+padding-right: 8px;
+
+}
+.res
+{
+      margin-top: 43px;
+    color: #3c3d5b;
+  font-weight: bold;
+  border-radius: 8px; 
+    display: block;
+font-family: sans-serif ;
+ /* justify-content: left;  
+   align-items: top;  */
+    position:absolute;
+  padding: 15px 20px 4px;
+ /* justify-content: center;   
+  align-items: center;   */
+     box-sizing: border-box; 
+right: 52px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    /* margin-left: 1px; */
+  width: 793px;
+
+    /* max-height: 2000px; */
+    min-height: 50px;
+    height: 510px;
+     background-color:#a2a4eb;
+}
+.rest{
+  position: relative;
+
+bottom: 11px;
+}
+.load
+{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+.hidden
+{
+  display: none;
+}
+.loada
+
+{
+  position: relative;
+   left: 10px;
+top: 110px;
+
+  border: 13px solid #ddd;
+  border-top: 13px solid #AB62A9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s  infinite;
+}
+@keyframes spin{
+  /* 0%{ transform: rotate(0deg);} */
+  100%{ rotate:360deg;}
+}
+.loadt{
+  position: relative;
+  top:120px;
+flex: 1;
+  /* right:25px; */
+      font-family: 'Courier New', Courier, monospace;
+  font-size: 1.0em;
+  /* display: flex; */
+  /* flex-wrap:nowrap; */
+  /* gap: 0.0em; */
+    text-align: center; 
+}
+.con{
+
+ display: flex;
+ position: relative;
+  background-color:#a2a4eb;
+  color: #3c3d5b;
+  text-wrap:initial;
+  border: white;
+  right: 2px;
+  bottom: 20px;
+  height: 87.5%;
+  width: 100%;
+  min-width: none;
+  min-height:none;
+   font-size: large;
+  font-weight: bolder;
+  resize: none;           /* Allow vertical resizing */
+      overflow-y: scroll; 
+        /* Scrollbar styles for WebKit browsers */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ab62a9 ;
+ 
+}
+.con::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 8px;
+  background: #fff;
+}
+.con::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgb(171, 98, 169) 0%,
+    rgb(215, 9, 171) 35%,
+    rgb(225, 19, 15) 100%
+  );
+  box-shadow: 0 0 8px 2px rgba(215, 9, 171, 0.5);
+}
+@media (max-width: 1200px) {
+    .chatM {
+        left: 150px;
+        width: calc(100% - 170px);
+
+    }
+        .res {
+      width: calc(100% - 50px) !important;
+        right: 20px;
+        height: calc(100% - 360px) !important;
+        
+    }
+        .txtarea {
+        width: calc(100% - 80px) !important; /* Original left:50px */
+        left: 25px;
+    }
+    
+    .bt {
+        width: calc(100% - 47px) !important;
+        left: 25px;
+    }
+    .ins{
+      width: 100%;
+      position: relative;
+      bottom: 2px;
+  
+    }
+    .con{
+      height: calc(100% - 80px) !important;
+      font-size: medium;
+    }
+    .load{
+        width: calc(100% - 47px) !important;
+    }
+       .mic{
+      width: (100%-20px);
+      height: (100%-20px);
+ 
+    }
+}
+
+@media (max-width: 992px) {
+    .chatM {
+        left: 50px;
+        width: calc(100% - 70px);
+    }
+        .res {
+      width: calc(100% - 50px) !important;
+        right: 20px;
+        height: calc(100% - 360px) !important;
+        
+    }
+        .txtarea {
+        width: calc(100% - 80px) !important; /* Original left:50px */
+        left: 25px;
+    }
+    
+    .bt {
+        width: calc(100% - 47px) !important;
+        left: 25px;
+    }
+    
+  .con{
+      font-size: medium;
+    }
+       /* .load{
+        width: calc(100% - 47px) !important;
+    } */
+        .mic{
+      width: (100%-20px);
+      height: (100%-20px);
+ 
+    }
+}
+
+@media (max-width: 768px) {
+    .chatM {
+        left: 20px;
+ 
+        width: calc(100% - 40px);
+        min-height: 800px;
+    }
+    
+    .txtarea {
+        width: calc(100% - 80px) !important; /* Original left:50px */
+        left: 25px;
+    }
+    
+    .bt {
+        width: calc(100% - 47px) !important;
+        left: 25px;
+    }
+    
+    .res {
+      width: calc(100% - 50px) !important;
+        right: 24px;
+        height: calc(100% - 360px) !important;
+        
+    }
+    
+    .chatM .cht .qu {
+        padding-left: 25px;
+    }
+      .con{
+      font-size: medium;
+    }
+       .load{
+        align-self: center;
+        justify-self: center;
+position: relative;
+bottom: 10%;
+        width: calc(100% - 207px) !important;
+    }
+       .loadt{
+      font-size: .9em;
+
+    }
+    .loada
+    {  top: 125px;
+left:1px;
+       width: 30px; 
+        height: 30px; 
+    }
+       .mic{
+        
+ 
+    }
+}
+
+@media (max-width: 576px) {
+    .chatM {
+        left: 1px;
+        width: calc(100% - 20px);
+        margin-top: 40px;
+        min-height: 700px;
+    }
+    
+    .txtarea {
+        padding: 10px 15px 4px;
+        font-size: medium;
+    }
+    
+    .con {
+        font-size: medium;
+    }
+    
+    .chatM .cht .qu {
+        font-size: 18px;
+    }
+     .foot{
+    width:100%;
+
+left:1px;
+
+  }
+     .res {
+      width: calc(100% - 50px) !important;
+        right: 24px;
+         height: calc(100% -20%) ;
+
+    }
+     .con{
+      height: calc(100% - 90px) !important;
+      font-size: medium;
+    }
+       .load{
+     
+        width: calc(100% - 100px) !important;
+        height: calc(100% - 60px) !important;
+        justify-self: center;
+        align-self: center;
+        position: relative;
+        bottom: 80px;
+        
+    }
+    .loadt{
+      font-size: .9em;
+
+    }
+    .loada
+    {  top: 125px;
+left:1px;
+       width: 20px; 
+        height: 20px; 
+    }
+    .mic{
+  
+  top:265px ;
+left: 360px;
+    }
+}
+
+
+.con::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 8px;
+}
+.mic{
+position:absolute;
+ right: 60px;
+bottom: 582px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;               /* Equal width and height */
+  height: 40px;
+border-radius: 50%; 
+background-color: #42434a;
+border: 3px solid rgb(14, 229, 226);
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+/* Animation for when mic is active (recording) */
+.mic.active {
+  animation: pulse 1.5s infinite;
+  border-color: #ff4d4d; /* Change border color to red when active */
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+}
+
+.mic.active i {
+  color: #ff4d4d; /* Change icon color to red when active */
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 77, 77, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+  }
+}
+.mic i {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  color: rgb(14, 229, 226);
+  font-size: 20px;
+}
+/* Optional: Add a click effect */
+.mic:active {
+  transform: scale(0.95);
+}
+.mic i{
+  position:relative;
+  align-self: center;
+  justify-self: center;
+  color: rgb(14, 229, 226);
+}
