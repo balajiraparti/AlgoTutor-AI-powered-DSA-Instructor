@@ -77,7 +77,7 @@ else{
 
     try {
       // First test the connection
-      const testResponse = await fetch('https://algo-tutor-ai-powered-dsa-instructo.vercel.app//api/test');
+      const testResponse = await fetch('https://algo-tutor-ai-powered-dsa-instructo.vercel.app/api/test');
       if (!testResponse.ok) {
         throw new Error('Cannot connect to server');
       }
