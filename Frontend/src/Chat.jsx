@@ -23,7 +23,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
   const startListening = () => {
        setMicActive((prev) => !prev);
     resetTranscript(); // Optional: Clear previous transcript
-    SpeechRecognition.startListening({ continuous: false, language: 'en-IN' });
+    SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
   };
    React.useEffect(() => {
     if (!listening && transcript) {
