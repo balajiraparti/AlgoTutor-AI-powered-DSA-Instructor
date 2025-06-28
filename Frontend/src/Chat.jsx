@@ -12,6 +12,9 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
   const [micActive, setMicActive] = useState(false);
     const [isSupported, setIsSupported] = useState(true);
   const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+//   useEffect(() => {
+//    navigator.mediaDevices.getUserMedia({ audio: true });
+//  }, []);
   if(!isSupported){
 
     alert("microphone isn't supported!");
@@ -19,11 +22,11 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
     const formatText = (text) => {
   return text.replace(/\*/g, '');
   };
-    
+//     
   const startListening = () => {
        setMicActive((prev) => !prev);
     resetTranscript(); // Optional: Clear previous transcript
-    SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+    SpeechRecognition.startListening({ continuous: false});
   };
    React.useEffect(() => {
     if (!listening && transcript) {
