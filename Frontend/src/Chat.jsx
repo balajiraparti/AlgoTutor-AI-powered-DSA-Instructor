@@ -27,11 +27,18 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
        setMicActive((prev) => !prev);
     resetTranscript(); // Optional: Clear previous transcript
     SpeechRecognition.startListening({ continuous: false});
+    if(micActive)
+    {
+         SpeechRecognition.stopListening();
+        setMicActive(false);
+    }
   };
+  
    React.useEffect(() => {
     if (!listening && transcript) {
        setMessage(transcript);
        setMicActive(false);
+    
     }
   }, [listening, transcript]);
 
