@@ -619,23 +619,17 @@ left:1px;
 
 }
 @media (max-width: 480px){
-      .ask {
-   width: calc(100% - 10px) !important;
-        left: 25px;
-    }
+
     .ask .mic{
          width: calc(100% - 90%) !important;
-        left: 300px;
+        left: 280px;
         top:265px;
     }
 
 
 }
 @media (max-width: 358px){
-      .ask {
-   width: calc(100% - 10px) !important;
-        left: 25px;
-    }
+ 
     .ask .mic{
          width: calc(100% - 89%) !important;
         left: 240px;
