@@ -251,7 +251,7 @@ return(
         <div className="cht">
         <p className="qu"> <i className="fa-solid fa-circle-question"> </i>    Ask any DSA question</p>
         <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="txtarea" placeholder="What is Stack?" rows={12} cols={90}></textarea>
-        <button disabled={isLoading} onClick={handlechat} className="bt"><img className="plimg" src="/paper-plane.png" alt='plane'></img>
+       <div className='ask'> <button disabled={isLoading} onClick={handlechat} className="bt"><img className="plimg" src="/paper-plane.png" alt='plane'></img>
     Ask DSA Instructor </button>
 
         {/* Microphone button with error handling */}
@@ -263,7 +263,7 @@ return(
         >
           <i className={micError ? "fa-solid fa-microphone-slash" : "fa-solid fa-microphone"}></i>
         </button>
-
+</div>
         {/* Show microphone error message */}
         {micError && (
           <div className="mic-error" style={{

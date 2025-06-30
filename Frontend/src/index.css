@@ -274,7 +274,7 @@ left: 250px;
 .bt{
   position: relative;
 
-width: 89%;
+width: 100%;
 left: 48.5px;
 top: 20px;
 height: 50px;
@@ -289,6 +289,7 @@ box-sizing: border-box;
  border-radius: 8px; 
 background-color: rgba(237, 19, 189, 0.35);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 0;
 }
 
 .plimg{
@@ -535,7 +536,8 @@ left:1px;
     }
        .mic{
         
- 
+  width: (100%-20px);
+      height: (100%-20px);
     }
 }
 
@@ -575,6 +577,12 @@ left:1px;
       height: calc(100% - 90px) !important;
       font-size: medium;
     }
+    .bt {
+        width: calc(100% - 47px) !important;
+        left: 25px;
+    }
+
+
        .load{
      
         width: calc(100% - 100px) !important;
@@ -595,21 +603,54 @@ left:1px;
        width: 20px; 
         height: 20px; 
     }
-    .mic{
   
-  top:265px ;
-left: 360px;
-    }
 }
+@media (max-width: 358px){
+      .ask {
+   width: calc(100% - 10px) !important;
+        left: 25px;
+    }
+    .ask .mic{
+         width: calc(100% - 89%) !important;
+        left: 240px;
+        top:265px;
+    }
 
 
+}
+@media (max-width: 480px){
+      .ask {
+   width: calc(100% - 10px) !important;
+        left: 25px;
+    }
+    .ask .mic{
+         width: calc(100% - 90%) !important;
+        left: 300px;
+        top:265px;
+    }
+
+
+}
+@media (max-width: 358px){
+      .ask {
+   width: calc(100% - 10px) !important;
+        left: 25px;
+    }
+    .ask .mic{
+         width: calc(100% - 89%) !important;
+        left: 240px;
+        top:265px;
+    }
+
+
+}
 .con::-webkit-scrollbar-track {
   background: #fff;
   border-radius: 8px;
 }
 .mic{
 position:absolute;
- right: 60px;
+ right: 64px;
 bottom: 582px;
   display: inline-flex;
   align-items: center;
@@ -622,6 +663,10 @@ border: 3px solid rgb(14, 229, 226);
   box-shadow: 0 2px 8px rgba(74, 144, 226, 0.15);
   transition: all 0.3s ease;
   cursor: pointer;
+    min-height: 10px;
+  max-width: 300px;
+  min-width: 10px;
+  z-index: 3;
 }
 /* Animation for when mic is active (recording) */
 .mic.active {
