@@ -11,7 +11,7 @@ const port = 3001;
 // Middleware setup
 app.use(cors({
   origin: [
-'https://algo-tutor-ai-powered-dsa-instructo-vert.vercel.app/',
+'https://algo-tutor-ai-powered-dsa-instructo-vert.vercel.app',
     'http://localhost:3000',
     'http://localhost:5173'
   ],
